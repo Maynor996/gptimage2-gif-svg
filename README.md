@@ -8,7 +8,7 @@
 
 表情的小动作、循环呼吸的光球、角色眨眼微笑……这类短动画，不一定要做成一条完整视频。GIF 更适合承载一个简单、明确、能反复看的动作。
 
-![循环呼吸的小太阳，演示 GIF 短动画效果](images/gpt-image-26-gif-demo.gif)
+![循环呼吸的小太阳，演示 GIF 短动画效果](https://upload.maynor1024.live/file/1794029016086_gpt-image-26-gif-demo.gif)
 
 *配图示意：一颗轻轻呼吸的小太阳，让静态角色多一点生命力。*
 
@@ -27,9 +27,9 @@
 
 做品牌小标识、功能图标、透明底装饰，或者需要交给设计师继续处理的矢量插画，SVG 更对路。它不是“另一张高清位图”，而是由路径、形状等组成的矢量文件。
 
-![原创太阳标志、FLARE 字标和三枚功能图标的矢量风示例](images/gpt-image-26-svg-preview-light.png)
+![原创太阳标志、FLARE 字标和三枚功能图标的矢量风示例](https://upload.maynor1024.live/file/1794029012246_gpt-image-26-svg-preview-light.png)
 
-*配图示意：原创太阳标志、几何字标与同风格图标；上图为预览，可下载真正的 [SVG 源文件](images/gpt-image-26-svg-demo.svg)。*
+*配图示意：原创太阳标志、几何字标与同风格图标；上图为预览，可下载真正的 [SVG 源文件](https://upload.maynor1024.live/file/1794029024587_gpt-image-26-svg-demo.svg)。*
 
 可以这样描述需求：
 
