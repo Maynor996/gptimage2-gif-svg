@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>别只让 AI 出静态图了！GPT Image 2.6 的 GIF / SVG，这样用更顺手</title>
+  <meta name="description" content="gptimage2.asia 上的 GPT Image 2.6 现已支持 GIF 和 SVG 输出。一文讲清两种格式各自适合什么、怎么写提示词、如何在站内使用。">
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --ink: #2b1d33;
+      --muted: #6b5674;
+      --accent: #c45c2a;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      line-height: 1.35;
+      margin: 0 0 1.2rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.4rem 0 0.9rem;
+    }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    blockquote {
+      margin: 1rem 0 1.4rem;
+      padding: 0.9rem 1.1rem;
+      background: #fff;
+      border-left: 4px solid #ffb52e;
+      color: #3d2a46;
+    }
+    ul { padding-left: 1.2rem; }
+    figure {
+      margin: 1.4rem 0;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 8px 24px rgba(80, 40, 20, 0.06);
+    }
+    figure img, figure object {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 0.7rem 0.3rem 0.2rem;
+    }
+    .cta {
+      margin-top: 2rem;
+      padding: 1.1rem 1.2rem;
+      background: #fff;
+      border-radius: 14px;
+    }
+    footer {
+      margin-top: 2.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>别只让 AI 出静态图了！GPT Image 2.6 的 GIF / SVG，这样用更顺手</h1>
+    <p>做内容最怕什么？封面有了，表情还不会动；图标看着不错，一放大边缘就糊。对创作者、设计师和运营来说，“生成一张图”只是开始，选对交付格式，才真正接得上后面的工作。</p>
+    <p>现在，<strong><a href="https://gptimage2.asia/">gptimage2.asia</a> 上的 GPT Image 2.6 支持 GIF 和 SVG 输出了</strong>。一个负责让画面动起来，一个负责让图形清晰、可编辑。不是谁替代谁，而是各自解决不同的问题。</p>
+
+    <h2>01｜想让人多看一眼，选 GIF</h2>
+    <p>表情的小动作、循环呼吸的光球、角色眨眼微笑……这类短动画，不一定要做成一条完整视频。GIF 更适合承载一个简单、明确、能反复看的动作。</p>
+    <figure>
+      <img src="images/gpt-image-26-gif-demo.gif" alt="循环呼吸的小太阳，演示 GIF 短动画效果">
+      <figcaption>配图示意：一颗轻轻呼吸的小太阳，让静态角色多一点生命力。</figcaption>
+    </figure>
+    <p>怎么写提示词？记住三个关键词：<strong>主体 + 动势 + 循环</strong>。例如：</p>
+    <blockquote>奶油色背景，一颗可爱的金黄色太阳角色，光芒轻轻收放，表情保持微笑，镜头固定，动作幅度小，首尾自然衔接，无缝循环。</blockquote>
+    <p>参数也不用靠猜：</p>
+    <ul>
+      <li><code>frame_count</code>：<strong>2–16 帧，默认 9 帧</strong>。</li>
+      <li><code>frame_duration_ms</code>：<strong>每帧 20–2000ms，默认 200ms，按 10ms 取整</strong>。</li>
+    </ul>
+    <p>每帧时长越短，播放节奏越快；默认 9 帧 × 200ms，一轮约 1.8 秒。建议先做一个动作，确认节奏后再调整，别把挥手、转身、跳跃全塞进同一个短循环。</p>
+
+    <h2>02｜想放大不糊、继续改，选 SVG</h2>
+    <p>做品牌小标识、功能图标、透明底装饰，或者需要交给设计师继续处理的矢量插画，SVG 更对路。它不是“另一张高清位图”，而是由路径、形状等组成的矢量文件。</p>
+    <figure>
+      <img src="images/gpt-image-26-svg-preview-light.png" alt="原创太阳标志、FLARE 字标和三枚功能图标的矢量风示例">
+      <figcaption>配图示意：原创太阳标志、几何字标与同风格图标。也可下载 <a href="images/gpt-image-26-svg-demo.svg">SVG 源文件</a>。</figcaption>
+    </figure>
+    <p>可以这样描述需求：</p>
+    <blockquote>原创几何太阳标志，搭配三枚同风格功能图标，简洁矢量风格，金黄、珊瑚橙和淡紫配色，轮廓清晰，透明背景。</blockquote>
+    <p>使用前有几条边界要记住：<strong>SVG 只支持文生图，每次生成 1 张</strong>；不能通过编辑／图生图接口输出 SVG，也不能把 SVG 当作位图参考图上传去修改。</p>
+    <p>它返回的是<strong>静态矢量 XML</strong>，不含脚本、外链资源或嵌入位图，并支持透明背景。适合交付干净的图形素材，不是可执行网页，也不是动画文件。需要定稿的 Logo，仍建议检查字形、路径细节和原创性。</p>
+
+    <h2>03｜在站内怎么开始？</h2>
+    <p>从<a href="https://gptimage2.asia/">首页</a>进入<a href="https://gptimage2.asia/generate">生成页</a>，选择 <strong>GPT Image 2.6 Sunburst / Flare</strong>，即可看到输出格式控制。按需求选择格式，再填写提示词；做 GIF 时设置帧数和每帧时长。</p>
+    <p>想直接进入对应模型，可以点：</p>
+    <ul>
+      <li><a href="https://gptimage2.asia/generate?model=gpt-image-2.6-sunburst">Sunburst 生成入口</a></li>
+      <li><a href="https://gptimage2.asia/generate?model=gpt-image-2.6-flare">Flare 生成入口</a></li>
+    </ul>
+    <p>站点将 Flare 定位为快速草稿方向，Sunburst 偏向精细成图。先想清楚要“动起来”还是“留下可编辑的图形”，再选格式，比盲目堆提示词更有效。</p>
+    <div class="cta">
+      <strong>今天就拿一个小需求试试：用 GIF 做一枚循环表情，或用 SVG 做一组透明底图标。</strong>
+      去 <a href="https://gptimage2.asia/">gptimage2.asia</a> 开始，把生成结果往真正可用的素材再推一步。
+    </div>
+    <footer>配图说明：本文配图为独立制作的用途示意，并非该网站的实际生成导出或官方案例；GIF 由 AI 生成静帧后制作循环动效，SVG 为原创矢量绘制。</footer>
+  </main>
+</body>
+</html>
